@@ -13,7 +13,7 @@ const runCommand = (command) => {
 
 const projectName = process.argv[2];
 
-const gitCheckoutCommand = `git clone --depths 1 https://github.com/devluckybabu/expo-app-with-navigation.git ${projectName}`;
+const gitCheckoutCommand = `git clone --depth 1 https://github.com/devluckybabu/expo-app-with-navigation.git ${projectName}`;
 const installDepsCommand = `cd ${projectName} && yarn install`;
 const checkedOut = runCommand(gitCheckoutCommand);
 if (!checkedOut) process.exit(-1);
